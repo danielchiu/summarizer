@@ -1,0 +1,49 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Element Summarizer – Options</title>
+<style>
+body { font-family: system-ui,sans-serif; max-width: 520px; margin: 40px auto; }
+label, input { display: block; width: 100%; font-size: 15px; }
+input { padding: 8px; margin-top: 4px; }
+button { margin-top: 12px; padding: 8px 16px; font-size: 15px; }
+#saved { margin-top: 12px; color: #008000; }
+</style>
+
+<!-- EXISTING  KEY  SECTION  ......................................... -->
+<h2>OpenAI API key</h2>
+<p>Paste your <code>sk-...</code> key below. It will be stored locally via <code>chrome.storage.sync</code>.</p>
+
+<label>
+  <input id="key" type="password" placeholder="sk-..." autofocus>
+</label>
+<button id="save">Save</button>
+<p id="saved"></p>
+
+<!-- ─── NEW  MODEL / SENTENCE CONTROLS ────────────────────────────── -->
+<hr>
+<h2>Model &amp; summary length</h2>
+
+<label for="model">Model</label>
+<select id="model"><option>Loading…</option></select>
+
+<label for="sentences">Number&nbsp;of&nbsp;sentences&nbsp;(1–100)</label>
+<input id="sentences" type="number" min="1" max="100" value="5">
+
+<p><small>Changes are saved automatically. Model list is refreshed once per day.</small></p>
+
+<!-- ─── NEW STYLE & PROMPT CONTROLS ───────────────────────────────── -->
+<hr>
+<h2>Appearance &amp; prompt</h2>
+
+<label for="fontSize">Popup font size&nbsp;(px)</label>
+<input id="fontSize"  type="number" min="8" max="32" value="14">
+
+<label for="prompt">Custom system prompt</label>
+<textarea id="prompt" rows="4" placeholder="You are a concise assistant. Summarize the following text in {nSent} sentences."></textarea>
+
+<p><small>
+Leave the prompt blank to use the default.&nbsp;
+Use <code>{nSent}</code> inside your prompt to insert the desired number of sentences.
+</small></p>
+
+<script src="options.js"></script>
