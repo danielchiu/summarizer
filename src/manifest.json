@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Element Summarizer",
   "description": "Highlight any DOM element and get a ChatGPT summary of its text.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "permissions": [
     "activeTab",
     "storage",
@@ -15,7 +15,8 @@
     "service_worker": "service_worker.js"
   },
   "action": {
-    "default_title": "Summarize element (Click) · Options (Right‑click)"
+    "default_title": "Summarize element (Click) · Options (Right‑click)",
+    "default_icon": "icon.png"
   },
   "options_page": "options.html",
   "content_scripts": [
