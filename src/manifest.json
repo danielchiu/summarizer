@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Element Summarizer",
-  "description": "Highlight any DOM element and get a ChatGPT summary of its text.",
-  "version": "1.0.1",
+  "description": "Highlight any part of a page and get a ChatGPT summary of its text.",
+  "version": "1.0.2",
   "permissions": [
     "activeTab",
     "storage",
